@@ -1,0 +1,22 @@
+{
+  "name": "RIIPL Lab",
+  "short_name": "RIIPL",
+  "description": "Yale School of Medicine - Radiology Informatics and Imaging Processing Laboratory",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#00356b",
+  "icons": [
+    {
+      "src": "images/yale-radiology-universal.png",
+      "sizes": "any",
+      "type": "image/png"
+    },
+    {
+      "src": "images/yale-radiology-universal.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
