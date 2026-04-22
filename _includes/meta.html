@@ -28,10 +28,10 @@
   {{ site.url }}{{ site.baseurl }}
 {%- endcapture %}
 
-{% assign yale_icon = "images/yale-radiology-universal.png" | file_exists %}
 {% assign png = "images/icon.png" | file_exists %}
 {% assign jpg = "images/icon.jpg" | file_exists %}
-{% assign icon = yale_icon | default: png | default: jpg | relative_url %}
+{% assign yale_icon = "images/yale-radiology-universal.png" | file_exists %}
+{% assign icon = png | default: jpg | default: yale_icon | relative_url %}
 
 {% assign jpg = "images/share.jpg" | file_exists %}
 {% assign png = "images/share.png" | file_exists %}
@@ -46,6 +46,10 @@
 
 <title>{{ fulltitle }}</title>
 
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/images/icon-16.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/icon-32.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="192x192" href="{{ '/images/icon-192.png' | relative_url }}">
+<link rel="apple-touch-icon" sizes="512x512" href="{{ '/images/icon-512.png' | relative_url }}">
 <link rel="icon" href="{{ icon }}">
 
 <meta name="title" content="{{ title }}">
